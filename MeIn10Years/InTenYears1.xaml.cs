@@ -9,6 +9,7 @@ public partial class InTenYears1 : ContentPage
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        lblName1.Text = "Hello, World!";
+        int age = int.Parse(entryAge.Text);
+        lblResult.Text = $"In ten years, {entryName.Text} will be {age + 10}.";
     }
 }

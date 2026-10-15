@@ -4,15 +4,15 @@
              x:Class="MeIn10Years.InTenYears1"
              Title="InTenYears1"
              BackgroundColor="AliceBlue">
-        <Label/>
-        <Grid RowDefinitions="*, *" Margin="10">
-        <Label  TextColor="DarkViolet" Text="nahhh" FontSize="Large"  Grid.Row="0" x:Name="lblName1"/>
+   
+    <Grid RowDefinitions="*, *" Margin="10">
+        <Label  TextColor="DarkViolet" Text="what will be your age in ten years?" FontSize="Large"  Grid.Row="0" x:Name="lblResult"/>
         <VerticalStackLayout  Spacing="10" Grid.Row="1" VerticalOptions="End">
             <Label TextColor="DarkViolet" Text="Your Name:"/>
-            <Entry Grid.Row="1"/>
+            <Entry Grid.Row="1" x:Name="entryName"/>
             
             <Label TextColor="DarkViolet" Text="Your Age:"/>
-            <Entry Grid.Row="1"/>
+            <Entry Grid.Row="1" Keyboard="Numeric" x:Name="entryAge"/>
 
             <Button  Clicked="Button_Clicked"  Text="Calculate" BackgroundColor="DarkCyan"/>
         </VerticalStackLayout>

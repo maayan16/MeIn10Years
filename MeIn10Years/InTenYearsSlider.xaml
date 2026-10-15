@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeIn10Years.InTenYearsSlider"
+             BackgroundColor="LightCyan"
+             Title="InTenYearsSlider">
+    <Grid RowDefinitions="*, *" Margin="10">
+        
+        <Label  TextColor="DarkViolet" FontSize="Large"  Grid.Row="0" x:Name="lblResult"/>
+        
+        <VerticalStackLayout  Spacing="10" Grid.Row="1" VerticalOptions="End">
+            
+            <Label TextColor="DarkViolet" Text="Your Name:"/>
+            <Entry Grid.Row="1" x:Name="entryName"/>
+
+            <Label TextColor="DarkViolet" Text="Your Age:"/>
+            <Grid ColumnDefinitions="*, 50" >
+                <Slider Grid.Column="0" x:Name="sliderAge" Minimum="0" Maximum="120" ValueChanged="sliderAge_ValueChanged" DragCompleted="sliderAge_DragCompleted" ThumbColor="DeepSkyBlue"/>
+                <Label Grid.Column="1" x:Name="entryAge" BackgroundColor="DeepSkyBlue"/>
+            </Grid>
+        </VerticalStackLayout>
+
+    </Grid>
+</ContentPage>
